@@ -6,11 +6,15 @@
   margin: -17px auto;
   margin-bottom: 20px;
   max-width: 180px; 
-  /* keep same size on mobile and pc */
   width: 100%; 
   height: auto;
+  opacity: 0.6!important;
+  animation: autoflip3 10s infinite;
 
+  position: relative;
+  left: 0px;          
 }
+
 
 /* shorter scroll */
 .title-wrapper {
@@ -61,21 +65,53 @@
 }
 
 
-
-
-
 .logo-underline {
   display: block;
   margin: -7px auto;
   width: 80px;
   max-width: 80px;
   height: auto;
+  opacity: 0.6;
+
+  animation: autoFlip2 10s infinite;
+  transform-origin: center;
+  backface-visibility: visible;
 }
 
-
-#content-area {
-  text-align: center; 
+@keyframes autoFlip2 {
+  0%, 80% {
+    transform: rotateY(0deg) scaleX(1.2);
+    /* blue */
+    filter: none; 
+  }
+  85%, 95% {
+    transform: rotateY(180deg) scaleX(1.2);
+    filter: brightness(0) saturate(100%) invert(66%) sepia(96%) saturate(654%) hue-rotate(-3deg) brightness(104%) contrast(105%);
+    /* yellow */
+  }
+  100% {
+    transform: rotateY(0deg) scaleX(1.2);
+    filter: none; 
+  }
 }
+
+@keyframes autoFlip3 {
+  0%, 80% {
+    transform: rotateY(0deg);
+    /* blue */
+    filter: none; 
+  }
+  85%, 95% {
+    transform: rotateY(180deg);
+    filter: brightness(0) saturate(100%) invert(66%) sepia(96%) saturate(654%) hue-rotate(-3deg) brightness(104%) contrast(105%);
+    /* yellow */
+  }
+  100% {
+    transform: rotateY(0deg);
+    filter: none; 
+  }
+}
+
 
 
 /*projects title text */
@@ -558,6 +594,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
 
+
 #intro-text.fade-in p {
   opacity: 1;
 }
@@ -574,6 +611,9 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
 
+#main-title {
+  animation: autoFlip3 10s infinite;
+}
 
 
 .p-box::before {
@@ -927,6 +967,55 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
 
+/* flip for the kevin y liu title  */
+
+.flip-wrapper2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-container2 {
+  width: 190px;
+  height: 50px;
+  perspective: 1000px;
+}
+
+.flip-card2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: autoFlip 10s infinite; 
+  
+  
+}
+/* the kevin y liu and k11 games svg images */
+
+.flip-card2 img {
+  width: 190px;
+  height: 60px;
+  transform: translate();
+  object-fit: cover;
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0;
+  left: -5px;
+  
+}
+
+/* k11-games text */
+.flip-card2 .back {
+  transform: rotateY(180deg);
+  left: -7px;
+}
+
+
+
+
+
+
+
 .flip-wrapper {
   display: flex;
   justify-content: center;
@@ -969,10 +1058,10 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 /* flip the logo  */
 @keyframes autoFlip {
-  0%, 85% {
+  0%, 80% {
     transform: rotateY(0deg);
   }
-  90%, 95% {
+  85%, 95% {
     transform: rotateY(180deg);
   }
   100% {
