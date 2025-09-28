@@ -19,8 +19,10 @@
 /* shorter scroll */
 .title-wrapper {
   position: relative; 
-  display: inline-block; 
+  display: block;     
   line-height: 1;
+  text-align: center;  
+  margin: 0 auto;       
 }
 
 .title-wrapper h2 {
@@ -31,33 +33,41 @@
 
 .scroll-underline {
   position: absolute;
-  left: 50%;
+  left: 49%;
   top: 50%;
-  /* stretch it vertically */
-  transform: translate(-53%, -30%) scaleY(1.1); 
-
+  transform: translate(-50%, -30%) scaleY(1.1);
   width: 300px; 
   height: auto;
   z-index: 1;
 }
 
 
+/* for the video box of andrew tomec */
+.video-box {
+  display: flex;
+  justify-content: center!important; 
+  left: 65px;
+  margin: 0px 0!important;          
+}
 /* wider scroll */
 .title-wrapper2 {
-  position: relative; 
-  display: inline-block;
+  position: relative;
+  display: block;      
+  text-align: center;   
+  margin: 0 auto;         
 }
 
 .title-wrapper2 h2 {
   position: relative;
   z-index: 2; 
+  text-align: center;
 }
 
 .scroll-underline2 {
   position: absolute;
-  left: 50%;
+  left: 49%; 
   top: 50%;
-  transform: translate(-53%, -26%) scaleY(1.1); 
+  transform: translate(-50%, -26%) scaleY(1.1); 
   width: 370px; 
   height: auto;
   z-index: 1; 
