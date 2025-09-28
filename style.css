@@ -391,7 +391,7 @@
 
 .game-card .extra-info {
   display: none;
-  font-size: 1.1rem!importantl
+  font-size: 1.1rem!important;
   color: var(--green);
   margin-top: 5px;
   line-height: 1.3;
