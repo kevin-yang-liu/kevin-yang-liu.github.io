@@ -51,7 +51,7 @@
   style="border: 2px solid var(--yellow2); 
   
          box-shadow: -3px 3px 9px rgba(255, 217, 0, 0.37), 
-         -8px 8px 17px rgba(0, 123, 255, 0.25), 
+         -8px 8px 17px rgba(38, 0, 255, 0.25), 
                      0 0px 50px #170015;">
 
 
@@ -74,7 +74,7 @@
   <div class="flip-container2">
     <div class="flip-card2">
       <img class="front" src="kevin.svg" alt="Kevin Title"
-        style="width: 200px; height: auto;">
+      style="width:200px; height:auto; filter: hue-rotate(45deg) saturate(150%) brightness(1.2);">
 
       <img class="back" src="k11-games.svg" alt="Flag"
         style="width: 200px; height: auto;">
@@ -92,8 +92,7 @@
           <a href="https://www.uwo.ca/about/index.html" style="color: var(--blue); text-decoration: underline;">
             Western University
           </a> &nbsp;<img src="flag.svg" alt="arrow" 
-          style="width:31px; height:auto; vertical-align:middle; margin-bottom:3px; margin-left:5px; transform: scaleY(1);
-     ;">
+          style="width:31px; height:auto; vertical-align:middle; margin-bottom:3px; margin-left:5px; transform: scaleY(1); filter: hue-rotate(45deg) saturate(150%) brightness(1.2);">
         </p>
       
       
@@ -155,7 +154,7 @@ window.addEventListener('DOMContentLoaded', () => {
   intervalId = setInterval(toggleImage, 2000);
   statusText.innerHTML = `
     <br>Click to pause 
-    <img src="arrow.svg" alt="arrow" style="width:20px; height:auto; vertical-align:middle;  margin-bottom:8px; margin-left:5px;">
+    <img src="arrow.svg" alt="arrow" style="width:20px; height:auto; vertical-align:middle;  margin-bottom:8px; margin-left:5px;  filter: hue-rotate(45deg) saturate(150%) brightness(1.2);">
   `;
   statusText.style.position = "relative";
   statusText.style.left = "0px";
