@@ -1190,7 +1190,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
     z-index: 2;
     text-shadow: 
       0 2px 0 rgba(65, 7, 66, 0.5);
-      font-weight: 300!important;
+      font-weight: 700!important;
 }
 
 /*when hovered over a nav bar word like projects */
