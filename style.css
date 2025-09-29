@@ -432,14 +432,17 @@
   font-size: 1.25rem!important;
   color: var(--red);
   text-decoration: none;
+  opacity: 1;
 }
 
 .game-card .extra-info {
+  font-weight: 300!important;
   display: none;
   font-size: 1.25rem!important;
   color: var(--green);
   margin-top: 5px;
   line-height: 1.3;
+  opacity: 1;
 }
 
 .game-card:hover .short-desc {
