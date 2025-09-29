@@ -1162,7 +1162,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 border-right: 1px solid var(--blue);
 border-bottom: 1px solid var(--blue);
 border-top: 1px solid var(--blue);
-opacity: 0.5;
+/* opacity: 0.5; */
   padding: 4px 3px; 
   color: var(--yellow);
 }
