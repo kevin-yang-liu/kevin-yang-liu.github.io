@@ -12,8 +12,7 @@
   animation: autoflip3 10s infinite;
 
   position: relative;
-  left: 0px;    filter: hue-rotate(50deg) saturate(150%) brightness(1.2);
-  
+  left: 0px;          
 }
 
 
@@ -30,7 +29,6 @@
   position: relative;
   z-index: 2; 
   line-height: 1;
-  
 }
 
 .scroll-underline {
@@ -41,8 +39,6 @@
   width: 300px; 
   height: auto;
   z-index: 1;
-  filter: hue-rotate(50deg) saturate(150%) brightness(1.2);
-  
 }
 
 
@@ -76,7 +72,6 @@
   height: auto;
   z-index: 1; 
   opacity: 1; 
-  filter: hue-rotate(50deg) saturate(150%) brightness(1.2);
 }
 
 
@@ -91,15 +86,13 @@
   animation: autoFlip2 10s infinite;
   transform-origin: center;
   backface-visibility: visible;
-
-  
 }
 
 @keyframes autoFlip2 {
   0%, 80% {
     transform: rotateY(0deg) scaleX(1.2);
     /* blue */
-    filter: hue-rotate(50deg) saturate(150%) brightness(1.1);
+    filter: none; 
   }
   85%, 95% {
     transform: rotateY(180deg) scaleX(1.2);
@@ -176,16 +169,16 @@
 
   box-shadow: 
       
-  -1px 1px 0 var(--black),
-  -2px 2px 0 var(--black),
-  -3px 3px 0 var(--black),
-  -4px 4px 0 var(--black),
-  -5px 5px 0 var(--black),
-  -6px 6px 0 var(--black),
-  -7px 7px 0 var(--black),
-  -8px 8px 0 var(--black),
-  -9px 9px 0 var(--black),
-  -10px 10px 0 var(--black),
+  -1px 1px 0 var(--shadow),
+  -2px 2px 0 var(--shadow),
+  -3px 3px 0 var(--shadow),
+  -4px 4px 0 var(--shadow),
+  -5px 5px 0 var(--shadow),
+  -6px 6px 0 var(--shadow),
+  -7px 7px 0 var(--shadow),
+  -8px 8px 0 var(--shadow),
+  -9px 9px 0 var(--shadow),
+  -10px 10px 0 var(--shadow),
   0 0px 8px #170015,
   -10px 10px 8px #170015,
   -10px 10px 8px rgba(0, 123, 255, 0.2),   
@@ -293,7 +286,7 @@
     padding: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
-    border-radius: 0px;
+    border-radius: 20px;
     text-decoration: none;
     text-align: center;
     transition: 0.2s ease;
@@ -315,16 +308,16 @@
     align-self: flex-end; 
     box-shadow: 
       
-    -1px 1px 0 var(--black),
-    -2px 2px 0 var(--black),
-    -3px 3px 0 var(--black),
-    -4px 4px 0 var(--black),
-    -5px 5px 0 var(--black),
-    -6px 6px 0 var(--black),
-    -7px 7px 0 var(--black),
-    -8px 8px 0 var(--black),
-    -9px 9px 0 var(--black),
-    -10px 10px 0 var(--black),
+    -1px 1px 0 var(--shadow),
+    -2px 2px 0 var(--shadow),
+    -3px 3px 0 var(--shadow),
+    -4px 4px 0 var(--shadow),
+    -5px 5px 0 var(--shadow),
+    -6px 6px 0 var(--shadow),
+    -7px 7px 0 var(--shadow),
+    -8px 8px 0 var(--shadow),
+    -9px 9px 0 var(--shadow),
+    -10px 10px 0 var(--shadow),
     0 0px 8px #170015,
     -10px 10px 8px #170015,
     -10px 10px 8px rgba(0, 123, 255, 0.2),   
@@ -363,15 +356,6 @@
 .game-card:nth-child(4)  { transform: translateZ(-6px);   z-index: 2; }
 .game-card:nth-child(5)  { transform: translateZ(-6px);   z-index: 2; }
 .game-card:nth-child(6)  { transform: translateZ(-6px);   z-index: 2; }
-
-
-.game-card:nth-child(7)  { transform: translateZ(-6px);   z-index: 3; }
-.game-card:nth-child(8)  { transform: translateZ(-6px);   z-index: 3; }
-.game-card:nth-child(9)  { transform: translateZ(-6px);   z-index: 3; }
-
-.game-card:nth-child(10)  { transform: translateZ(-6px);   z-index: 4; }
-.game-card:nth-child(11)  { transform: translateZ(-6px);   z-index: 4; }
-.game-card:nth-child(12)  { transform: translateZ(-6px);   z-index: 4; }
 
 .game-card:nth-child(7),
 .game-card:nth-child(8),
@@ -439,17 +423,14 @@
   font-size: 1.25rem!important;
   color: var(--red);
   text-decoration: none;
-  opacity: 1;
 }
 
 .game-card .extra-info {
-  font-weight: 300!important;
   display: none;
-  font-size: 1.25rem!important;
+  font-size: 1.1rem!important;
   color: var(--green);
   margin-top: 5px;
   line-height: 1.3;
-  opacity: 1;
 }
 
 .game-card:hover .short-desc {
@@ -474,18 +455,19 @@
 /* the colors don't make sense since i changed it to just blue now */
 :root {
     --dark: #250038;
-    --black: #8f68f3;
-    --background: #6200a43e;
-    --white: #8f68f3;
-    --yellow: #8f68f3;
+    --black: #0496ff;
+    --shadow: #006ab6;
+    --background: #0062a43e;
+    --white: #0496ff;
+    --yellow: #0496ff;
     --yellow2: #ffd30d;
-    --red: #8f68f3;
-    --blue: #8f68f3;
+    --red: #0496ff;
+    --blue: #0496ff;
     --darkblue: #0496ff;
     /*dark dark purple not actually green now*/
-    --green: #8f68f3;
-    --purple: #8f68f3;
-    --darkpurple: #8f68f3;
+    --green: #0496ff; 
+    --purple: #0496ff;
+    --darkpurple: #0496ff;
 }
 
 * {
@@ -586,8 +568,8 @@ body {
 
   /* Oval blue shadow to bottom-left */
   text-shadow: 
-    -3px 3px 8px rgba(143, 104, 243, 0.4),   
-    -8px 8px 20px rgba(143, 104, 243, 0.6);  
+    -3px 3px 8px rgba(0, 123, 255, 0.4),   
+    -8px 8px 20px rgba(0, 123, 255, 0.6);  
 }
 
 
@@ -705,16 +687,16 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
   box-shadow: 
       
-  -1px 1px 0 var(--black),
-   -2px 2px 0 var(--black),
-   -3px 3px 0 var(--black),
-   -4px 4px 0 var(--black),
-   -5px 5px 0 var(--black),
-   -6px 6px 0 var(--black),
-   -7px 7px 0 var(--black),
-   -8px 8px 0 var(--black),
-   -9px 9px 0 var(--black),
-   -10px 10px 0 var(--black),
+  -1px 1px 0 var(--shadow),
+  -2px 2px 0 var(--shadow),
+  -3px 3px 0 var(--shadow),
+  -4px 4px 0 var(--shadow),
+  -5px 5px 0 var(--shadow),
+  -6px 6px 0 var(--shadow),
+  -7px 7px 0 var(--shadow),
+  -8px 8px 0 var(--shadow),
+  -9px 9px 0 var(--shadow),
+  -10px 10px 0 var(--shadow),
    0 0px 8px #170015,
    -10px 10px 8px #170015,
    -10px 10px 8px rgba(0, 123, 255, 0.2),   
@@ -808,16 +790,16 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
   box-shadow: 
       
-  -1px 1px 0 var(--black),
-   -2px 2px 0 var(--black),
-   -3px 3px 0 var(--black),
-   -4px 4px 0 var(--black),
-   -5px 5px 0 var(--black),
-   -6px 6px 0 var(--black),
-   -7px 7px 0 var(--black),
-   -8px 8px 0 var(--black),
-   -9px 9px 0 var(--black),
-   -10px 10px 0 var(--black),
+  -1px 1px 0 var(--shadow),
+  -2px 2px 0 var(--shadow),
+  -3px 3px 0 var(--shadow),
+  -4px 4px 0 var(--shadow),
+  -5px 5px 0 var(--shadow),
+  -6px 6px 0 var(--shadow),
+  -7px 7px 0 var(--shadow),
+  -8px 8px 0 var(--shadow),
+  -9px 9px 0 var(--shadow),
+  -10px 10px 0 var(--shadow),
    0 0px 8px #170015,
    -10px 10px 8px #170015,
    -10px 10px 8px rgba(0, 123, 255, 0.2),   
@@ -849,16 +831,16 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   border: 3px solid var(--blue);
   box-shadow: 
       
-  -1px 1px 0 var(--black),
-  -2px 2px 0 var(--black),
-  -3px 3px 0 var(--black),
-  -4px 4px 0 var(--black),
-  -5px 5px 0 var(--black),
-  -6px 6px 0 var(--black),
-  -7px 7px 0 var(--black),
-  -8px 8px 0 var(--black),
-  -9px 9px 0 var(--black),
-  -10px 10px 0 var(--black),
+  -1px 1px 0 var(--shadow),
+  -2px 2px 0 var(--shadow),
+  -3px 3px 0 var(--shadow),
+  -4px 4px 0 var(--shadow),
+  -5px 5px 0 var(--shadow),
+  -6px 6px 0 var(--shadow),
+  -7px 7px 0 var(--shadow),
+  -8px 8px 0 var(--shadow),
+  -9px 9px 0 var(--shadow),
+  -10px 10px 0 var(--shadow),
   0 0px 8px #170015,
   -10px 10px 8px #170015,
   -10px 10px 8px rgba(0, 123, 255, 0.2),   
@@ -920,16 +902,16 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
   box-shadow: 
       
- -1px 1px 0 var(--black),
-   -2px 2px 0 var(--black),
-   -3px 3px 0 var(--black),
-   -4px 4px 0 var(--black),
-   -5px 5px 0 var(--black),
-   -6px 6px 0 var(--black),
-   -7px 7px 0 var(--black),
-   -8px 8px 0 var(--black),
-   -9px 9px 0 var(--black),
-   -10px 10px 0 var(--black),
+  -1px 1px 0 var(--shadow),
+  -2px 2px 0 var(--shadow),
+  -3px 3px 0 var(--shadow),
+  -4px 4px 0 var(--shadow),
+  -5px 5px 0 var(--shadow),
+  -6px 6px 0 var(--shadow),
+  -7px 7px 0 var(--shadow),
+  -8px 8px 0 var(--shadow),
+  -9px 9px 0 var(--shadow),
+  -10px 10px 0 var(--shadow),
    0 0px 8px #170015,
    -10px 10px 8px #170015,
    -10px 10px 8px rgba(0, 123, 255, 0.2),   
@@ -977,16 +959,16 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
     box-shadow: 0 0px 50px rgba(0, 0, 0,1);
     box-shadow: 
       
-    -1px 1px 0 var(--black),
-   -2px 2px 0 var(--black),
-   -3px 3px 0 var(--black),
-   -4px 4px 0 var(--black),
-   -5px 5px 0 var(--black),
-   -6px 6px 0 var(--black),
-   -7px 7px 0 var(--black),
-   -8px 8px 0 var(--black),
-   -9px 9px 0 var(--black),
-   -10px 10px 0 var(--black),
+    -1px 1px 0 var(--shadow),
+    -2px 2px 0 var(--shadow),
+    -3px 3px 0 var(--shadow),
+    -4px 4px 0 var(--shadow),
+    -5px 5px 0 var(--shadow),
+    -6px 6px 0 var(--shadow),
+    -7px 7px 0 var(--shadow),
+    -8px 8px 0 var(--shadow),
+    -9px 9px 0 var(--shadow),
+    -10px 10px 0 var(--shadow),
    0 0px 8px #170015,
    -10px 10px 8px #170015,
    -10px 10px 8px rgba(0, 123, 255, 0.2),   
@@ -1197,7 +1179,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
     z-index: 2;
     text-shadow: 
       0 2px 0 rgba(65, 7, 66, 0.5);
-      font-weight: 700!important;
+      font-weight: 300!important;
 }
 
 /*when hovered over a nav bar word like projects */
@@ -1281,4 +1263,3 @@ p a {
     100% { opacity: 0; }
   
 }
-
