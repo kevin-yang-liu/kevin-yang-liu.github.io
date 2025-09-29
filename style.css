@@ -894,7 +894,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 .video-box2 {
   transform: translateX(32px) !important; 
   text-align: center;
-  border: 3px solid var(--blue);
+  border: 3px solid var(--blue)!important;
   padding: 10px;
   border-radius: 20px!important;
   background: #2B0028;
