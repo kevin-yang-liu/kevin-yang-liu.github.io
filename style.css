@@ -357,6 +357,15 @@
 .game-card:nth-child(5)  { transform: translateZ(-6px);   z-index: 2; }
 .game-card:nth-child(6)  { transform: translateZ(-6px);   z-index: 2; }
 
+
+.game-card:nth-child(7)  { transform: translateZ(-6px);   z-index: 3; }
+.game-card:nth-child(8)  { transform: translateZ(-6px);   z-index: 3; }
+.game-card:nth-child(9)  { transform: translateZ(-6px);   z-index: 3; }
+
+.game-card:nth-child(10)  { transform: translateZ(-6px);   z-index: 4; }
+.game-card:nth-child(11)  { transform: translateZ(-6px);   z-index: 4; }
+.game-card:nth-child(12)  { transform: translateZ(-6px);   z-index: 4; }
+
 .game-card:nth-child(7),
 .game-card:nth-child(8),
 .game-card:nth-child(9),
