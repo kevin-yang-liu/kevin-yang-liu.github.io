@@ -490,7 +490,7 @@ body {
     linear-gradient(to bottom, var(--background) 1px, transparent 1px);
     
 
-  background-size: 35px 35px; 
+  background-size: 40px 40px; 
   background-position: 0 0;
 
   background-attachment: scroll;
