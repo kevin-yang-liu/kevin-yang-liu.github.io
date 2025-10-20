@@ -457,7 +457,7 @@
     --dark: #250038;
     --black: #0496ff;
     --shadow: #006ab6;
-    --background: #00558e67;
+    --background: #003c6367;
     --white: #0496ff;
     --yellow: #0496ff;
     --yellow2: #ffd30d;
@@ -484,8 +484,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: #190025;
 
+  background-color: #250038;
   background-image: 
     linear-gradient(to right, var(--background) 1px, transparent 1px),
     linear-gradient(to bottom, var(--background) 1px, transparent 1px);
