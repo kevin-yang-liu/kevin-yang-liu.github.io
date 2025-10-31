@@ -49,6 +49,7 @@
   left: 65px;
   margin: 0px 0!important;          
 }
+
 /* wider scroll */
 .title-wrapper2 {
   position: relative;
@@ -546,7 +547,7 @@ body {
 
 .container {
     max-width: 700px;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     padding: 10px;
     
@@ -948,9 +949,9 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 .nav-container {
   background: #250038;
     position: relative;
-    width: 120%;
+    width: 90%;
     height: 45px;
-    transform: translateX(-66px);
+    transform: translateX(31px);
  
     overflow: hidden;
     border-radius: 20px;
@@ -990,7 +991,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 
 .nav-container:hover {
-    transform: translateX(-76px) translateY(10px);
+    transform: translateX(21px) translateY(10px);
     box-shadow: 0 0px 50px rgba(0, 0, 0,1);
        box-shadow: 
       
