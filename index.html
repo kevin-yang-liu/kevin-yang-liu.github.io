@@ -24,7 +24,7 @@
       const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
       const zoomStyle = document.getElementById('dynamic-zoom');
-      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.45 : 1.35}; }`;
+      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.45 : 1.1}; }`;
     });
   </script>
   
@@ -43,14 +43,12 @@
   <div class="flip-container">
     <div class="flip-card">
       <img class="front" src="profile.jpg" alt="Kevin Liu" 
-      style="
-             border: 4px solid var(--darkblue); 
+      style="border: 2px solid var(--darkblue); 
              box-shadow: -8px 8px 17px rgba(0, 123, 255, 0.25), 
                          0 0px 50px #170015;">
     
-    
 <img class="back" src="k11-logo.jpg" alt="Kevin Liu" 
-  style="border: 4px solid var(--yellow2); 
+  style="border: 2px solid var(--yellow2); 
   
          box-shadow: -3px 3px 9px rgba(255, 217, 0, 0.37), 
          -8px 8px 17px rgba(0, 123, 255, 0.25), 
@@ -71,19 +69,9 @@
      
       
       <h1 id="main-title">
-       <!-- flip the kevin y liu text -->
-<div class="flip-wrapper2">
-  <div class="flip-container2">
-    <div class="flip-card2">
-      <img class="front" src="kevin.svg" alt="Kevin Title"
-        style="width: 200px; height: auto;">
-
-      <img class="back" src="k11-games.svg" alt="Flag"
-        style="width: 200px; height: auto;">
-    </div>
-  </div>
-</div>
-
+        <img src="kevin.svg" alt="Kevin Logo"
+             style="width:200px; height:auto; vertical-align:middle; margin-bottom:3px; margin-left:0px; transform: scaleY(1);">
+        <br>
         <img src="underline.svg" alt="Underline effect" class="title-underline">
       </h1>
       
@@ -98,8 +86,11 @@
      ;">
         </p>
       
-      
-        
+        <p class="p-box">
+          <a href="https://liukev.neocities.org" style="color: var(--blue); text-decoration: underline;">
+            Click here
+          </a> for the colorful version of this portfolio
+        </p>
       </div>
       
 
@@ -127,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<br><br>
+<br><br><br>
 <!--the first pic-->
 <img id="switching-img" src="imgs/img16.jpg" alt="Description of image" class="bordered-img" width="500">
 <p id="status-text" style="color: var(--green); font-size: 1rem; margin-top: 10px;"></p>
@@ -156,7 +147,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // 2000 is 2 secs per pic
   intervalId = setInterval(toggleImage, 2000);
   statusText.innerHTML = `
-    <br>Click to pause 
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click to pause 
     <img src="arrow.svg" alt="arrow" style="width:20px; height:auto; vertical-align:middle;  margin-bottom:8px; margin-left:5px;">
   `;
   statusText.style.position = "relative";
@@ -250,7 +241,6 @@ function stopSlideshow() {
       <a class="nav-item" data-page="aboutme">ABOUT</a>
        <a class="nav-item active" data-page="projects">PROJECTS</a>
 <a class="nav-item" data-page="experiences">CAREER</a>
-<!-- <a class="nav-item" data-page="skills">SKILLS</a> -->
 <a class="nav-item" data-page="achievements">HONORS</a>
 <a class="nav-item" data-page="features">FEATURES</a>
 <a class="nav-item" data-page="contact">CONTACT</a>
@@ -302,8 +292,9 @@ function stopSlideshow() {
 
 
 <p class="p-box2" id="p4">
-  ➢ now almost done studying CS @ Western
-  <br>➢ gaining experience as an Unreal Engine Intern 
+  ➢ start bachelors ECE @ UofT
+  <br>➢ switched to bachelors CS @ UWO
+  <br>➢ currently an Unreal Engine intern at a startup
   <br>➢ currently involved in <a href="https://www.westernuai.ca/" target="_blank"  style="text-decoration: underline;">Western AI</a> 
   <br>&nbsp &nbsp &nbsp⤷ team project: <a href="https://github.com/Western-Artificial-Intelligence/condo-cost-predictor" target="_blank" style="text-decoration: underline;">
 Toronto Condo Cost Predictor</a>
@@ -538,7 +529,7 @@ Spotify Playlist Generator</a>
       <div class="title-wrapper2">
     <br><br><h2>EXPERIENCES</h2>
   <img src="scroll2.svg" alt="Scroll effect" class="scroll-underline2">
-</div><br><br>
+</div><br><br><br>
        
 
 <p>
@@ -577,7 +568,7 @@ Spotify Playlist Generator</a>
 <div class="title-wrapper2">
     <br><br><h2>VOLUNTEER</h2>
   <img src="scroll2.svg" alt="Scroll effect" class="scroll-underline2">
-</div><br>
+</div><br><br>
 <br>
 
 <p>Insurance Claims Adjustor @ 
@@ -611,7 +602,7 @@ x
       <div class="title-wrapper2">
     <br><br><h2>TECHNICAL SKILLS</h2>
   <img src="scroll2.svg" alt="Scroll effect" class="scroll-underline2">
-</div><br>
+</div><br><br>
         <br>
 
         <p>
@@ -626,7 +617,7 @@ x
 <div class="title-wrapper2">
     <br><br><h2>&nbsp INTERPERSONAL</h2>
   <img src="scroll2.svg" alt="Scroll effect" class="scroll-underline2">
-</div><br>
+</div><br><br>
 <br>
 <p>
  Leadership:<br> Led teams to execute multi-phase tasks efficiently<br><br>
@@ -640,7 +631,7 @@ x
 <div class="title-wrapper2">
     <br><br><h2>LANGUAGES</h2>
   <img src="scroll2.svg" alt="Scroll effect" class="scroll-underline2">
-</div><br><br>
+</div><br><br><br>
 
 <div style="text-align: center; margin: 5px 0;">
   <p> English </p>
@@ -687,7 +678,7 @@ x
       <div class="title-wrapper2">
     <br><br><h2>CERTIFICATES</h2>
   <img src="scroll2.svg" alt="Scroll effect" class="scroll-underline2">
-</div><br>
+</div><br><br>
     <br>
     <p>IBM Z Xplore - Concepts Certificate</p>
     <p>IBM Z Xplore - Advanced Certificate</p>
@@ -699,7 +690,7 @@ x
     <div class="title-wrapper2">
     <br><br><h2>ACHIEVEMENTS</h2>
   <img src="scroll2.svg" alt="Scroll effect" class="scroll-underline2">
-</div><br><br>
+</div><br><br><br>
     <p>2nd place in Power Round of ASDAN Math Tournament</p>
     <p>Top 20% in Guts round at ASDAN Math Tournament</p>
     <p>1st place in the Entertainment Category at the Toronto Tech Expo</p>
@@ -711,17 +702,16 @@ x
     <p>Scored top 1% on the SAT: 800 math, 710 reading</p>
     <p>Highest grade in Pre-Calc at highest-ranked high school in Alberta</p><br><br>
     <div class="title-wrapper">
-    <br><br><h2>FUN FACTS</h2>
+    <br><br><h2>RANDOM</h2>
   <img src="scroll.svg" alt="Scroll effect" class="scroll-underline">
-</div><br><br>
+</div><br><br><br>
     <p>Painted 50+ oil paintings of realistic nature scenes: <a href="https://www.instagram.com/kevinarttt" target="_blank" style="text-decoration: underline;">view art</a></p>
-    <p>Recorded 189 wpm typing record for 10 words: <a href="https://monkeytype.com/profile/keveleven" style="text-decoration: underline;">view stats</a></p>
     <p>Top Novice Player at Calgary Junior Chess Center <a href="chess.jpg" target="_blank">
         <u>view image</u>
       </a>
-      <p>35th in Canada for solo mode in Pubg mobile for C7S19 season</p>
-      <p>Ranked 7th most followed game creator on Scratch <a href="https://scratchviews.com/users/kevin_eleven_1234" target="_blank" style="text-decoration: underline;">view stats</a></p>
-    <p>Created 22 games with over 100k views each: <a href="https://k11games.itch.io/" target="_blank"style="text-decoration: underline;">view games</a></p>
+      <p>7th most followed game creator on Scratch <a href="https://scratchviews.com/users/kevin_eleven_1234" target="_blank" style="text-decoration: underline;">view stats</a></p>
+    <p>Made 22 games with over 100k views each: <a href="https://k11games.itch.io/" target="_blank"style="text-decoration: underline;">view games</a></p>
+    <p>175 wpm record for 15 secs on Monkeytype, 170 on Typeracer
   </div>
   <br>
         <br>
@@ -753,7 +743,7 @@ features: `<br><br>
 <div class="title-wrapper">
     <br><br><h2>FEATURES</h2>
   <img src="scroll.svg" alt="Scroll effect" class="scroll-underline">
-</div><br>
+</div><br><br>
      <p><br>Some little videos made by others reviewing my games
   <p>(muted by default - click to unmute if on desktop)</p>
 </p>
@@ -959,6 +949,8 @@ features: `<br><br>
     font-size: 1rem;
     line-height: 1.8;
     position: relative; /* allows shifting */
+
+    left: 50px;
   }
   .contact-block p {
     margin: 0;
@@ -979,22 +971,20 @@ features: `<br><br>
 
   @media (max-width: 768px) {
     .contact-block {
-      left: -19px;
+      left: 40px;
     }
   }
 </style>
 
 <div class="contact-block">
-  <p><span class="label">Email Address</span><span class="value"><a href="mailto:kliu469@uwo.ca">kliu469@uwo.ca</a></span></p>
-  <p><span class="label">Phone Number</span><span class="value"><a href="tel:+14036603554">(403) 660-3554</a></span></p>
-  <p><span class="label">Personal LinkedIn</span><span class="value"><a href="https://linkedin.com/in/kevin-yang-liu/">kevin-yang-liu</a></span></p>
-  <p><span class="label">GitHub Account</span><span class="value"><a href="https://github.com/kevin-yang-liu">kevin-yang-liu</a></span></p>
-  <p><span class="label">Itch.io Account</span><span class="value"><a href="https://k11games.itch.io/">k11games</a></span></p>
-  <p><span class="label">Art Portfolio</span><span class="value"><a href="https://www.instagram.com/kevinarttt">kevinarttt</a></span></p>
-  <p><span class="label">Games LinkedIn</span><span class="value"><a href="https://www.linkedin.com/company/k11-games/">k11-games</a></span></p>
-  <p><span class="label">Discord Account</span><span class="value"><a href="https://discord.com/users/kevineleven1234">keleven1</a></span></p>
-  <p><span class="label">YouTube Account</span><span class="value"><a href="https://www.youtube.com/@kevinelevengames">kevinelevengames</a></span></p>
-  <p><span class="label">Kofi Page</span><span class="value"><a href="https://ko-fi.com/k11games">k11games</a></span></p>
+  <p><span class="label">Email</span><span class="value"><a href="mailto:kliu469@uwo.ca">kliu469@uwo.ca</a></span></p>
+  <p><span class="label">LinkedIn</span><span class="value"><a href="https://linkedin.com/in/kevin-yang-liu/">kevin-yang-liu</a></span></p>
+  <p><span class="label">GitHub</span><span class="value"><a href="https://github.com/kevin-yang-liu">kevin-yang-liu</a></span></p>
+  <p><span class="label">Itch.io</span><span class="value"><a href="https://k11games.itch.io/">k11games</a></span></p>
+  <p><span class="label">Artwork</span><span class="value"><a href="https://www.instagram.com/kevinarttt">kevinarttt</a></span></p>
+  <p><span class="label">Discord</span><span class="value"><a href="https://discord.com/users/kevineleven1234">keleven1</a></span></p>
+  <p><span class="label">Kofi</span><span class="value"><a href="https://ko-fi.com/k11games">k11games</a></span></p>
+  <p><span class="label">YouTube</span><span class="value"><a href="https://www.youtube.com/playlist?list=PL8mvmizvPHsOVDc7f93RPcyxgXHmC7JG5">kevinelevengames</a></span></p>
   
 </div>
 
@@ -1039,7 +1029,6 @@ features: `<br><br>
       
       
     };
-
 // decides which page to show initially but u still have to change the active nav bar at the top too
     contentArea.innerHTML = pages.projects;
 
@@ -1066,110 +1055,109 @@ features: `<br><br>
 
 
 
+  <style>
+  .dot {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    opacity: 0;
+    transform: scale(0);
+    animation: starLife 4s forwards;
+  }
 
-  <style>
-    .dot {
-      position: absolute;
-      border-radius: 50%;
-      background: white;
-      opacity: 0;
+  @keyframes starLife {
+    0% {
       transform: scale(0);
-      animation: starLife 4s forwards;
-    }
-  
-    @keyframes starLife {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-      }
-      25% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      75% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(0);
-        opacity: 0;
-      }
-    }
-  </style>
-  
-  
-  
-  
-  <style>
-    .dot {
-      position: absolute;
-      background: url("star.svg") no-repeat center/contain;
       opacity: 0;
+    }
+    25% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
       transform: scale(0);
-      animation: starLife 4s forwards;
-      pointer-events: none; /* don’t block clicks */
+      opacity: 0;
     }
-  
-    @keyframes starLife {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-      }
-      25% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      75% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(0);
-        opacity: 0;
-      }
+  }
+</style>
+
+
+
+
+<style>
+  .dot {
+    position: absolute;
+    background: url("star.svg") no-repeat center/contain;
+    opacity: 0;
+    transform: scale(0);
+    animation: starLife 4s forwards;
+    pointer-events: none; /* don’t block clicks */
+  }
+
+  @keyframes starLife {
+    0% {
+      transform: scale(0);
+      opacity: 0;
     }
-  </style>
-  
-  <script>
-    const MAX_DOTS = 0; 
-    const DOT_LIFETIME = 4000; 
-    const DOT_INTERVAL = 100; 
-  
-    function createDot() {
-      const dot = document.createElement("div");
-      dot.className = "dot";
-  
-      const size = Math.random() * 10 + 8;
-      dot.style.width = size + "px";
-      dot.style.height = size + "px";
-  
-      const pageHeight = Math.max(
-        document.body.scrollHeight,
-        document.documentElement.scrollHeight
-      );
-      const pageWidth = Math.max(
-        document.body.scrollWidth,
-        document.documentElement.scrollWidth
-      );
-  
-      dot.style.left = Math.random() * pageWidth + "px";
-      dot.style.top = Math.random() * pageHeight + "px";
-  
-      document.body.appendChild(dot);
-  
-      setTimeout(() => dot.remove(), DOT_LIFETIME);
+    25% {
+      transform: scale(1);
+      opacity: 1;
     }
-  
-    function maintainDots() {
-      const currentDots = document.querySelectorAll(".dot").length;
-      if (currentDots < MAX_DOTS) {
-        createDot();
-      }
+    75% {
+      transform: scale(1);
+      opacity: 1;
     }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  const MAX_DOTS = 300; 
+  const DOT_LIFETIME = 4000; 
+  const DOT_INTERVAL = 100; 
+
+  function createDot() {
+    const dot = document.createElement("div");
+    dot.className = "dot";
+
+    const size = Math.random() * 10 + 8;
+    dot.style.width = size + "px";
+    dot.style.height = size + "px";
+
+    const pageHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+    const pageWidth = Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth
+    );
+
+    dot.style.left = Math.random() * pageWidth + "px";
+    dot.style.top = Math.random() * pageHeight + "px";
+
+    document.body.appendChild(dot);
+
+    setTimeout(() => dot.remove(), DOT_LIFETIME);
+  }
+
+  function maintainDots() {
+    const currentDots = document.querySelectorAll(".dot").length;
+    if (currentDots < MAX_DOTS) {
+      createDot();
+    }
+  }
+
+  setInterval(maintainDots, DOT_INTERVAL);
+</script>
+
   
-    setInterval(maintainDots, DOT_INTERVAL);
-  </script>
-  
-    
-  
-  </body>
+
+</body>
