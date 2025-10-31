@@ -24,12 +24,11 @@
       const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
       const zoomStyle = document.getElementById('dynamic-zoom');
-      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.45 : 1.1}; }`;
+      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.45 : 1.0}; }`;
     });
   </script>
   
 </head>
-
 <body>
   <div class="container">
     <div class="header">
@@ -43,12 +42,14 @@
   <div class="flip-container">
     <div class="flip-card">
       <img class="front" src="profile.jpg" alt="Kevin Liu" 
-      style="border: 2px solid var(--darkblue); 
+      style="
+             border: 4px solid var(--darkblue); 
              box-shadow: -8px 8px 17px rgba(0, 123, 255, 0.25), 
                          0 0px 50px #170015;">
     
+    
 <img class="back" src="k11-logo.jpg" alt="Kevin Liu" 
-  style="border: 2px solid var(--yellow2); 
+  style="border: 4px solid var(--yellow2); 
   
          box-shadow: -3px 3px 9px rgba(255, 217, 0, 0.37), 
          -8px 8px 17px rgba(0, 123, 255, 0.25), 
@@ -62,6 +63,7 @@
 <img src="underline2.svg" alt="Underline effect" class="logo-underline">
 
 
+
         
         <br>
         
@@ -69,9 +71,19 @@
      
       
       <h1 id="main-title">
-        <img src="kevin.svg" alt="Kevin Logo"
-             style="width:200px; height:auto; vertical-align:middle; margin-bottom:3px; margin-left:0px; transform: scaleY(1);">
-        <br>
+       <!-- flip the kevin y liu text -->
+<div class="flip-wrapper2">
+  <div class="flip-container2">
+    <div class="flip-card2">
+      <img class="front" src="kevin.svg" alt="Kevin Title"
+        style="width: 200px; height: auto;">
+
+      <img class="back" src="k11-games.svg" alt="Flag"
+        style="width: 200px; height: auto;">
+    </div>
+  </div>
+</div>
+
         <img src="underline.svg" alt="Underline effect" class="title-underline">
       </h1>
       
@@ -86,11 +98,8 @@
      ;">
         </p>
       
-        <p class="p-box">
-          <a href="https://liukev.neocities.org" style="color: var(--blue); text-decoration: underline;">
-            Click here
-          </a> for the colorful version of this portfolio
-        </p>
+      
+        
       </div>
       
 
@@ -595,7 +604,8 @@ Spotify Playlist Generator</a>
   <a href="https://www.swintonsart.com/" target="_blank" style="text-decoration: underline;">Swinton's Art Club</a> (<a href="https://www.instagram.com/kevinarttt" target="_blank" style="text-decoration: underline;">view my art</a>)  (2014 to 2020)
 </p><br>
 x
-    <p>See more at my <a href="https://www.linkedin.com/in/kevin-yang-liu/" target="_blank" style="text-decoration: underline;">LinkedIn</a></p>
+    <p> More info on my <a href="https://www.linkedin.com/in/kevin-yang-liu/" target="_blank" style="text-decoration: underline;">LinkedIn</a></p>
+    <p>(I don't have Linkedin Premium so don't worry I won't know that you looked)</p>
     
     
     <br><br>
@@ -668,6 +678,29 @@ x
                 box-shadow: 2px 0px 0px darkred;"></div>
   </div>
 </div>
+<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
         
       
@@ -1054,110 +1087,91 @@ features: `<br><br>
 
 
 
-
   <style>
-  .dot {
-    position: absolute;
-    border-radius: 50%;
-    background: white;
-    opacity: 0;
-    transform: scale(0);
-    animation: starLife 4s forwards;
-  }
-
-  @keyframes starLife {
-    0% {
-      transform: scale(0);
+    .dot {
+      position: absolute;
+      background: url("star.svg") no-repeat center/contain;
       opacity: 0;
-    }
-    25% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    75% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
       transform: scale(0);
-      opacity: 0;
+      animation: starLife 4s forwards;
+      pointer-events: none; /* don’t block clicks */
+      z-index: -1; /* stay behind page content */
     }
-  }
-</style>
-
-
-
-
-<style>
-  .dot {
-    position: absolute;
-    background: url("star.svg") no-repeat center/contain;
-    opacity: 0;
-    transform: scale(0);
-    animation: starLife 4s forwards;
-    pointer-events: none; /* don’t block clicks */
-  }
-
-  @keyframes starLife {
-    0% {
-      transform: scale(0);
-      opacity: 0;
-    }
-    25% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    75% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(0);
-      opacity: 0;
-    }
-  }
-</style>
-
-<script>
-  const MAX_DOTS = 300; 
-  const DOT_LIFETIME = 4000; 
-  const DOT_INTERVAL = 100; 
-
-  function createDot() {
-    const dot = document.createElement("div");
-    dot.className = "dot";
-
-    const size = Math.random() * 10 + 8;
-    dot.style.width = size + "px";
-    dot.style.height = size + "px";
-
-    const pageHeight = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight
-    );
-    const pageWidth = Math.max(
-      document.body.scrollWidth,
-      document.documentElement.scrollWidth
-    );
-
-    dot.style.left = Math.random() * pageWidth + "px";
-    dot.style.top = Math.random() * pageHeight + "px";
-
-    document.body.appendChild(dot);
-
-    setTimeout(() => dot.remove(), DOT_LIFETIME);
-  }
-
-  function maintainDots() {
-    const currentDots = document.querySelectorAll(".dot").length;
-    if (currentDots < MAX_DOTS) {
-      createDot();
-    }
-  }
-
-  setInterval(maintainDots, DOT_INTERVAL);
-</script>
-
   
-
-</body>
+    @keyframes starLife {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      25% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      75% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+  </style>
+  
+  <script>
+    const DOT_LIFETIME = 4000;  //4s per dot life
+    const DOT_INTERVAL = 50;    //generate dot every 50ms
+    const dots = [];
+  
+    //continuous dots
+    setInterval(() => {
+      const dot = document.createElement("div");
+      dot.className = "dot";
+  
+      //dots size from [5,25]
+      const size = Math.random() * 20 + 5;
+      dot.style.width = `${size}px`;
+      dot.style.height = `${size}px`;
+  
+      const pageHeight = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      );
+      const pageWidth = Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth
+      );
+  
+      const left = Math.random() * pageWidth;
+      const top = Math.random() * pageHeight;
+  
+      dot.style.left = `${left}px`;
+      dot.style.top = `${top}px`;
+      dot.style.position = "absolute";
+  
+      //parallax dots function
+      //inversely proportional to its size
+      const speedFactor = ((25.5 - size) / 25) + 0;
+  
+      document.body.appendChild(dot);
+  
+      dots.push({ element: dot, top, speedFactor });
+  
+    
+      setTimeout(() => {
+        if (dot.parentNode) {
+          dot.remove();
+        }
+        const index = dots.findIndex(d => d.element === dot);
+        if (index > -1) dots.splice(index, 1);
+      }, DOT_LIFETIME);
+    }, DOT_INTERVAL);
+  
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      dots.forEach(({ element, top, speedFactor }) => {
+        element.style.top = `${top + scrollY * speedFactor * 0.3}px`;
+      });
+    });
+  </script>
+  
