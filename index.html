@@ -1120,7 +1120,7 @@ features: `<br><br>
   
   <script>
     const DOT_LIFETIME = 4000;  //4s per dot life
-    const DOT_INTERVAL = 50;    //generate dot every 50ms
+    const DOT_INTERVAL = 70;    //generate dot every 50ms
     const dots = [];
   
     //continuous dots
@@ -1151,7 +1151,7 @@ features: `<br><br>
   
       //parallax dots function
       //inversely proportional to its size
-      const speedFactor = ((25.5 - size) / 25) + 0;
+      const speedFactor = ((27 - size) / 20) + 0;
   
       document.body.appendChild(dot);
   
@@ -1170,7 +1170,7 @@ features: `<br><br>
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
       dots.forEach(({ element, top, speedFactor }) => {
-        element.style.top = `${top + scrollY * speedFactor * 0.3}px`;
+        element.style.top = `${top + scrollY * speedFactor * 0.6}px`;
       });
     });
   </script>
