@@ -156,7 +156,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // 2000 is 2 secs per pic
   intervalId = setInterval(toggleImage, 2000);
   statusText.innerHTML = `
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click to pause 
+    <br>&nbsp;&nbsp;&nbsp;&nbspClick to pause 
     <img src="arrow.svg" alt="arrow" style="width:20px; height:auto; vertical-align:middle;  margin-bottom:8px; margin-left:5px;">
   `;
   statusText.style.position = "relative";
@@ -165,7 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function stopSlideshow() {
   clearInterval(intervalId);
-  statusText.innerHTML = "<br>Click to resume";
+  statusText.innerHTML = "<br>&nbsp;&nbsp;&nbsp;&nbspClick to resume";
   statusText.style.position = "relative";
   
   statusText.style.left = "-8px";
@@ -1079,7 +1079,7 @@ features: `<br><br>
   </script>
   
   <p style="font-size: 0.7rem; text-align: center; margin-top: 30px; color: var(--blue);">
-    Designed in 2025 by Kevin Y. Liu
+    Designed from scratch by Kevin Liu
      <br>
         <br>
         <br>
